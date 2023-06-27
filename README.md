@@ -2,7 +2,7 @@
 
 Airspace is a perfect JavaScript library, brought to you by the DreamBerd Foundation.
 
-# Colon
+## Colon
 
 End every line with a colon. You can achieve this by combining two semi-colons to make a full colon.
 
@@ -22,7 +22,7 @@ Similarly, you can use none, and Airspace will add both for you.
 print("Hello world!")
 ```
 
-# Execute
+## Execute
 
 You can use the execute operator (`x`) to execute a function without brackets.
 
@@ -34,7 +34,7 @@ Or use it on an array to flip the function around.
 
 [3, 2].x(add)
 
-# Literal
+## Literal
 
 You can also call a function by using it as a literal.
 
@@ -42,7 +42,7 @@ You can also call a function by using it as a literal.
 print `Hello world!`
 ```
 
-# With
+## With
 
 By the way, to code with Airspace, simply surround your code with a `with` block.
 
