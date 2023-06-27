@@ -10,7 +10,7 @@ End every line with a colon. You can achieve this by combining two semi-colons t
 print("Hello world!");;
 ```
 
-Alternatively, you can use half a colon, and second half will be automatically inserted for you.
+Alternatively, you can use half a colon, and a second half will be automatically inserted for you.
 
 ```js
 print("Hello world!");
