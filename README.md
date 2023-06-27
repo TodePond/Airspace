@@ -132,3 +132,11 @@ name.get =o=> o.value.toUpperCase()
 
 print `name` // "LU"
 ```
+
+## Ownership
+
+Airspace is **NOT** endorsed by the Dreamberd Foundation in any way.
+
+As mentioned in the official Dreamberd project:
+
+- ***Using the word 'DreamBerd' in your project name implies that the DreamBerd Foundation does not own your project.***
