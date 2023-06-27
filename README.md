@@ -32,7 +32,9 @@ print.x= "Hello world!"
 
 Or use it on an array to flip the function around.
 
+```js
 [3, 2].x(add)
+```
 
 ## Literal
 
