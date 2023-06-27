@@ -22,7 +22,7 @@ Similarly, you can use none, and Airspace will helpfully add both.
 print("Hello world!")
 ```
 
-**Note:** Colons can also be placed at the start of a line. It makes no difference.
+**Note:** Colons can be placed at the start of a line too. It makes no difference.
 
 ```js
 ;;print("Hello world!")
