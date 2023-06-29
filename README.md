@@ -42,6 +42,12 @@ Or use it on an array to flip the function around.
 [3, 2].x(add)
 ```
 
+If you prefer to run your code more trippingly, you can use the gentle execute operator (`,`).
+
+```js
+print, "Hello world!"
+```
+
 ## Function Literals
 
 You can also call a function by using it as a literal.
@@ -50,19 +56,29 @@ You can also call a function by using it as a literal.
 print `"Hello world!"`
 ```
 
-This allows for a flexible syntax.
-
-```js
-add `3, 2`
-add `(3, 2)`
-```
-
-And fine-grained control over how your code runs. You can easily call by reference, or by value.
+This allows for fine-grained control over how your code runs. You can easily call by reference, or by value.
 
 ```js
 score = 2
 add `3, score`
 add `3, ${score}`
+```
+
+## Debug Operator
+
+You might benefit from the debug operator (`.d`). Use it on any value to print it to the console.
+
+```js
+"Hello world!".d // "Hello world!"
+```
+
+You don't need to rearrange your code. Want to log something? Just chuck a 'dot d' on it.
+
+```js
+score = 3
+if (score.d > 9) { // 3
+   print("You win!")
+} 
 ```
 
 ## With
@@ -71,7 +87,7 @@ By the way, to code with Airspace, simply surround your code with a `with` block
 
 ```js
 with (Airspace) {
-   print `Hello world!`
+   "Hello world!".d
 }
 ```
 
@@ -81,10 +97,10 @@ All examples in this readme should be placed within the `with` block.
 
 ## Rocket Operator
 
-To run your code asynchronously, place it after a rocket operator (`x=o=>`). This shoots it to the next animation frame.
+To run your code asynchronously, place it within a rocket operator (`x=o=>`). This shoots it to the next animation frame.
 
 ```js
-x=o=> print `"Hello world!"`
+x=o=> "Hello world!".d
 ```
 
 The rocket operator also supports code blocks.
@@ -98,10 +114,10 @@ x=o=> {
 
 ## Functions
 
-To create a function, use the arrow operator (`=o=>`).
+To create a function, use the unlit rocket operator (`=o=>`).
 
 ```js
-greet =o=> print `"Hello world!"`
+greet =o=> "Hello world!".d
 
 greet() // "Hello world!"
 ```
@@ -121,7 +137,7 @@ To define a variable, just assign it.
 ```js
 name = "Lu"
 
-print `name` // "Lu"
+name.d // "Lu"
 ```
 
 You can control exactly how your variable works. By default, it just gets and sets its value, but you can change this.
@@ -130,5 +146,5 @@ You can control exactly how your variable works. By default, it just gets and se
 name = "Lu"
 name.get =o=> o.value.toUpperCase()
 
-print `name` // "LU"
+name.d // "LU"
 ```
