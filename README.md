@@ -42,12 +42,6 @@ Or use it on an array to flip the function around.
 [3, 2].x(add)
 ```
 
-If you prefer to run your code more trippingly, you can use the gentle execute operator (`,`).
-
-```js
-print, "Hello world!"
-```
-
 ## Function Literals
 
 You can also call a function by using it as a literal.
