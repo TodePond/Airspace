@@ -46,10 +46,7 @@
         function runExecuteOperator() {
             with (Airspace) { // Enter the Airspace.
                 print.x = "Hello execute operator!";
-
-                //print.x = [3, 2].x(add); // No worky - prototype addition doesn't work on non-string literals
-                array = [3, 2]
-                print("array.x(add) == " + array.x(add))
+                print.x = "[3, 2].x(add) => " + [3, 2].x(add);
             }
         }
     </script>
