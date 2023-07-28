@@ -1,0 +1,28 @@
+{
+  "name": "airspace",
+  "description": "Airspace is a perfect JavaScript library, brought to you by the DreamBerd Foundation (https://github.com/TodePond/DreamBerd).",
+  "keywords": [
+    "airspace",
+    "javascript",
+    "berd",
+    "perfection"
+  ],
+  "version": "0.0.1-alpha",
+  "author": "Berd",
+  "homepage": "https://github.com/TodePond/Airspace",
+  "licence": "MIT",
+  "main": "src/airspace.js",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TodePond/Airspace"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./src/airspace.d.ts"
+    }
+  }
+}

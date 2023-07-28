@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Airspace Example</title>
+    <!-- No compilers, no complex imports, requires or exports, just pure, classic JS. Find a copy of Airspace from anywhere on the internet and pull it in! -->
+    <script src="../src/airspace.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <a href="https://github.com/TodePond/DreamBerd" class="dreamberd-logo">
+        <img src="../dreamberd.svg" alt="Airspace by the DreamBerd Foundation" />
+    </a>
+    <h1>Airspace!</h1>
+    <p>The perfect JavaScript library brought to you by the <a href="https://github.com/TodePond/DreamBerd">DreamBerd</a> Foundation.</p>
+    <p>Click the buttons below representing sections of the Airspace README, and then check the developer console to see the execution of some example Airspace code!</p>
+    <div>
+        <button type="button" onclick="runAirspace('airspace-colons', runColons)">Colons</button>
+        <button type="button" onclick="runAirspace('airspace-execute', runExecuteOperator)">Execute Operator</button>
+        <button type="button" onclick="runAirspace('airspace-literals', runFunctionLiterals)">Function Literals</button>
+        <button type="button" onclick="runAirspace('airspace-debug', runDebugOperator)">Debug Operator</button>
+        <button type="button" onclick="runAirspace('airspace-rocket', runRocketOperator)">Rocket Operator</button>
+        <button type="button" onclick="runAirspace('airspace-functions', runFunctions)">Functions</button>
+        <button type="button" onclick="runAirspace('airspace-variables', runVariables)">Variables</button>
+    </div>
+
+    <script type="text/javascript" id="airspace-initial" class="airspace-code active no-before">
+        function helloThere() {
+            with (Airspace) { // Enter the Airspace.
+                "Airspace code will be shown here when you click a button!"
+            }
+        }
+    </script>
+
+    <script type="text/javascript" id="airspace-colons" class="airspace-code">
+        function runColons() {
+            with (Airspace) { // Enter the Airspace.
+                print("Hello colons 1!");; // Use full colons.
+                print("Hello colons 2!"); // Half-colons will have the second half automatically inserted.
+                print("Hello colons 3!") // So will no colons.
+                ;;print("Hello colons 4!") // And pre-colons.
+            }
+        }
+    </script>
+
+    <script type="text/javascript" id="airspace-execute" class="airspace-code">
+        function runExecuteOperator() {
+            with (Airspace) { // Enter the Airspace.
+                print.x = "Hello execute operator!";
+
+                //print.x = [3, 2].x(add); // No worky - prototype addition doesn't work on non-string literals
+                array = [3, 2]
+                print("array.x(add) == " + array.x(add))
+            }
+        }
+    </script>
+
+    <script type="text/javascript" id="airspace-literals" class="airspace-code">
+        function runFunctionLiterals() {
+            with (Airspace) { // Enter the Airspace.
+                print`"Hello function literal!"`
+
+                score = 2
+                print("By Reference: " + add`3, score`)
+                print("By Value: " + add`3, ${score}`)
+            }
+        }
+    </script>
+
+    <script type="text/javascript" id="airspace-debug" class="airspace-code">
+        function runDebugOperator() {
+            with (Airspace) { // Enter the Airspace.
+                "Hello debug operator!".d
+                print.x = "Number debug below:"
+                num = 1234
+                num.d
+
+                print.x = "Array debug below:"
+                array = [1, 2, 3, 4]
+                array.d
+
+                print.x = "Within if statement debug below:"
+                score = 3
+                if (score.d > 9) {
+                    print("You win!");
+                }
+            }
+        }
+    </script>
+
+    <script type="text/javascript" id="airspace-rocket" class="airspace-code">
+        function runRocketOperator() {
+            with (Airspace) { // Enter the Airspace.
+                x = o => "Hello rocket operator!".d
+
+                x = o => {
+                    print`"Hello rocket operator"`
+                    print`"...in code blocks!"`
+                }
+            }
+        }
+    </script>
+
+    <script type="text/javascript" id="airspace-functions" class="airspace-code">
+        function runFunctions() {
+            with (Airspace) { // Enter the Airspace.
+                greet = o => "Hello world!".d
+                greet()
+
+                custom_add = o => o.a + o.b
+                print("custom_add(3, 2) == " + custom_add(3, 2))
+            }
+        }
+    </script>
+
+    <script type="text/javascript" id="airspace-variables" class="airspace-code">
+        function runVariables() {
+            with (Airspace) { // Enter the Airspace.
+                name = "Lu"
+                name.d // "Lu"
+
+                name = "Lu"
+                name.get = o => o.value.toUpperCase()
+                name.d // "LU"
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function runAirspace(codeContainer, func) {
+            document.querySelectorAll(".airspace-code").forEach(el => el.classList.remove("active"));
+            document.querySelector(`#${codeContainer}`).classList.add("active");
+            func();
+        }
+    </script>
+</body>
+</html>
