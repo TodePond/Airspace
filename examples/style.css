@@ -1,0 +1,66 @@
+/* 
+* Blue colours pleasantly sampled from DreamBerd themself.
+*/
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 1em;
+    padding: 0;
+}
+
+a:link {
+    color: #0094ff;
+}
+
+a:hover {
+    color: #0078cf;
+}
+
+a:active {
+    color: #1467a3;
+}
+
+button {
+    background-color: #0094ff;
+    border: none;
+    border-radius: 4px;
+    padding-inline: 2em;
+    padding-block: 1em;
+    color: #EEEEEE;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 100ms ease-in-out;
+}
+
+button:hover {
+    background-color: #0078cf;
+}
+
+button:active {
+    background-color: #1467a3;
+}
+
+.dreamberd-logo {
+    float: right;
+}
+
+.dreamberd-logo > img {
+    height: 14em;
+    max-height: 14em;
+}
+
+.airspace-code.active {
+    display: block;
+    white-space: pre;
+    background-color: #b6e1ff;
+    font-family: monospace;
+    margin-block: 1em;
+    box-shadow: inset 0px 0px 16px rgba(0,0,0,0.2);
+}
+
+.airspace-code.active:not(.no-before)::before {
+    content: "The below JavaScript+Airspace code was just executed! Check your browser's developer console for output!";
+    font-weight: bold;
+    display: block;
+    padding: 1em;
+}
