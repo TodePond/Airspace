@@ -67,13 +67,11 @@
         function runDebugOperator() {
             with (Airspace) { // Enter the Airspace.
                 "Hello debug operator!".d
-                print.x = "Number debug below:"
-                num = 1234
-                num.d
+                print.x = "Number debug below:";;
+                (1234).d
 
-                print.x = "Array debug below:"
-                array = [1, 2, 3, 4]
-                array.d
+                print.x = "Array debug below:";;
+                [1, 2, 3, 4].d
 
                 print.x = "Within if statement debug below:"
                 score = 3
@@ -87,9 +85,9 @@
     <script type="text/javascript" id="airspace-rocket" class="airspace-code">
         function runRocketOperator() {
             with (Airspace) { // Enter the Airspace.
-                x = o => "Hello rocket operator!".d
+                x=o=> "Hello rocket operator!".d
 
-                x = o => {
+                x=o=> {
                     print`"Hello rocket operator"`
                     print`"...in code blocks!"`
                 }
@@ -100,10 +98,10 @@
     <script type="text/javascript" id="airspace-functions" class="airspace-code">
         function runFunctions() {
             with (Airspace) { // Enter the Airspace.
-                greet = o => "Hello world!".d
+                greet =o=> "Hello world!".d
                 greet()
 
-                custom_add = o => o.a + o.b
+                custom_add =o=> o.a + o.b
                 print("custom_add(3, 2) == " + custom_add(3, 2))
             }
         }
@@ -116,7 +114,7 @@
                 name.d // "Lu"
 
                 name = "Lu"
-                name.get = o => o.value.toUpperCase()
+                name.get =o=> o.value.toUpperCase()
                 name.d // "LU"
             }
         }
